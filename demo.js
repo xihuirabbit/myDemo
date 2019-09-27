@@ -1,5 +1,6 @@
 (function () {
     const myObj = document.getElementById("ifrPage100002");
+    console.log(myObj)
     // 获取cookie备用
     const aa = document.cookie;
     let cookiesTotal= aa.split(";");
@@ -17,4 +18,8 @@
         dataInput1 = sessionStorage.getItem("dataInput");
         console.log(dataInput1);
     }
+
+    //搜索项存储
+    let searchEvent = myObj.contentWindow.document.querySelector("#multSearchType");
+    console.log(searchEvent);
 })();
