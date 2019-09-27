@@ -11,15 +11,16 @@
     //输入框存储
     let dataInput = myObj.contentWindow.document.querySelector("#qryCustomerInputStr");
     console.log(dataInput);
-    let dataInput1 = "";
-    dataInput.onchange = function () {
-        console.log(inputEvent.value)
-        sessionStorage.setItem('dataInput', dataInput.value);
-        dataInput1 = sessionStorage.getItem("dataInput");
-        console.log(dataInput1);
-    }
+    // let dataInput1 = "";
+    // dataInput.onchange = function () {
+    //     console.log(inputEvent.value)
+    //     sessionStorage.setItem('dataInput', dataInput.value);
+    //     dataInput1 = sessionStorage.getItem("dataInput");
+    //     console.log(dataInput1);
+    // }
 
     //搜索项存储
-    let searchEvent = myObj.contentWindow.document.querySelector("#multSearchType");
-    console.log(searchEvent);
+    // let searchEvent = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
+    // console.log(searchEvent);
+    // let searchData = searchEvent[0]
 })();
