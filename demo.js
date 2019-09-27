@@ -9,7 +9,7 @@
     console.log(cookies);
 
     //输入框存储
-    let dataInput = myObj.contentWindow.document.querySelector("#qryCustomerInputStr");
+    let dataInput = document.getElementById("ifrPage100002").contentWindow.document.querySelector("#qryCustomerInputStr");
     console.log(dataInput);
     // let dataInput1 = "";
     // dataInput.onchange = function () {
@@ -23,4 +23,6 @@
     // let searchEvent = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
     // console.log(searchEvent);
     // let searchData = searchEvent[0]
+
+    // 点击事件选择
 })();
