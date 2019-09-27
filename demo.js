@@ -1,6 +1,6 @@
 (function () {
     // 获取cookie备用
-    var el=document.createElement("script");
+    const el=document.createElement("script");
     el.setAttribute("src","cookies.js");
     el.setAttribute("type","text/javascript");
     document.body.appendChild(el);
