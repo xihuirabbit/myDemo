@@ -1,7 +1,8 @@
 (function () {
     // 获取cookie备用
-    const el=document.createElement("script");
-    el.setAttribute("src","cookies.js");
-    el.setAttribute("type","text/javascript");
-    document.body.appendChild(el);
+    const aa = document.cookie;
+    let cookiesTotal= aa.split(";");
+    let cookiesData = cookiesTotal[1].split("=");
+    let cookies = cookiesData[1];
+    console.log(cookies);
 })();
