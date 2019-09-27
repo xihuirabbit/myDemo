@@ -1,5 +1,5 @@
 (function () {
-    const myObj = document.getElementById("ifrPage100002");
+    var myObj = document.getElementById("ifrPage100002");
     console.log(myObj)
     // 获取cookie备用
     const aa = document.cookie;
