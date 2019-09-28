@@ -13,5 +13,7 @@
     //输入框存储
     let inputObj  = myObj.contentWindow.document.querySelector("#qryCustomerInputStr");
     console.log(inputObj)
+    let inputdata = inputObj.value;
+    console.log(inputdata)
 
 })();
