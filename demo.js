@@ -14,12 +14,15 @@
     let inputObj  = myObj.contentWindow.document.querySelector("#qryCustomerInputStr");
     console.log(inputObj);
     let inputdata = "";
-    inputObj.onchange = function () {
-        if(inputObj){
-            inputdata = inputObj.value;
-            console.log(inputdata)
+    if(inputObj){
+        inputObj.onchange = function () {
+            if(inputObj){
+                inputdata = inputObj.value;
+                console.log(inputdata)
+            }
         }
     }
+
 
 
     // 搜索项选择
