@@ -26,23 +26,38 @@
 
 
     // 搜索项选择
-    let searchDiv = myObj.contentWindow.document.querySelector("#mainContent");
-    console.log(searchDiv);
     let searchData = "accNbr";
-    if(searchDiv){
-        searchDiv.onclick = function () {
+    let divObj = "";
+    let seacchBty = myObj.contentWindow.document.getElementsByClassName("yn-search-ico")[0].innerHTML;
+    console.log(seacchBty);
+    if(seacchBty){
+        seacchBty.onclick = function () {
             let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
             console.log(searchObj);
             if(searchObj){
                 searchData = searchObj[0].getAttribute("data-type");
                 console.log(searchData);
+                divObj = myObj.contentWindow.document.querySelector("#content1");
+                console.log(divObj);
             }
         }
     }
+    // let searchDiv = myObj.contentWindow.document.querySelector("#mainContent");
+    // console.log(searchDiv);
+
+    // if(searchDiv){
+    //     searchDiv.onclick = function () {
+    //         let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
+    //         console.log(searchObj);
+    //         if(searchObj){
+    //             searchData = searchObj[0].getAttribute("data-type");
+    //             console.log(searchData);
+    //         }
+    //     }
+    // }
 
     // 新增按钮
-    // let divObj = myObj.contentWindow.document.querySelector("#content1");
-    // console.log(divObj);
+
     // divObj.onclick =
     // let divBty = myObj.contentWindow.document.createElement("input");
     // divBty.setAttribute("type", "button");
