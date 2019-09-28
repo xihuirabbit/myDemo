@@ -15,13 +15,24 @@
     console.log(inputObj);
     let inputdata = "";
     inputObj.onchange = function () {
-        inputdata = inputObj.value;
-        console.log(inputdata)
+        if(inputObj){
+            inputdata = inputObj.value;
+            console.log(inputdata)
+        }
     }
 
 
     // 搜索项选择
     console.log(myObj.contentWindow.document.querySelector("#multSearchType"));
+    let searchBty = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("button");
+    console.log(searchBty);
     let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
-    console.log(searchObj)
+    console.log(searchObj);
+    let searchData = "";
+    searchBty.onclick = function () {
+        if(searchObj){
+            searchData = "";
+            console.log(searchData);
+        }
+    }
 })();
