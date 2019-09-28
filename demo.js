@@ -26,12 +26,14 @@
     let searchDiv = myObj.contentWindow.document.querySelector("#mainContent");
     console.log(searchBty);
     let searchData = "accNbr";
-    searchDiv.onclick = function () {
-        let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
-        console.log(searchObj);
-        if(searchObj){
-            searchData = searchObj[0].getAttribute("data-type");
-            console.log(searchData);
+    if(searchDiv){
+        searchDiv.onclick = function () {
+            let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
+            console.log(searchObj);
+            if(searchObj){
+                searchData = searchObj[0].getAttribute("data-type");
+                console.log(searchData);
+            }
         }
     }
 
