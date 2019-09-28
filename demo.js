@@ -24,7 +24,7 @@
 
     // 搜索项选择
     console.log(myObj.contentWindow.document.querySelector("#multSearchType"));
-    let searchBty = myObj.contentWindow.document.querySelector("#multSearchType")[0];
+    let searchBty = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("button")[0];
     console.log(searchBty);
     let searchData = "accNbr";
     searchBty.onclick = function () {
