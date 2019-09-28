@@ -23,11 +23,10 @@
 
 
     // 搜索项选择
-    console.log(myObj.contentWindow.document.querySelector("#multSearchType"));
-    let searchBty = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("button")[0];
+    let searchDiv = myObj.contentWindow.document.querySelector("#mainContent");
     console.log(searchBty);
     let searchData = "accNbr";
-    searchBty.onclick = function () {
+    searchDiv.onclick = function () {
         let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
         console.log(searchObj);
         if(searchObj){
@@ -37,44 +36,45 @@
     }
 
     // 新增按钮
-    let divObj = myObj.contentWindow.document.querySelector("#readCertBtn");
-    console.log(divObj);
-    let divBty = myObj.contentWindow.document.createElement("input");
-    divBty.setAttribute("type", "button");
-    divBty.setAttribute("value", "数据");
-    divBty.setAttribute("id", "divBty");
-    divBty.style.width = "15px";
-    divBty.setAttribute("onclick", "getData()");
-    divObj.appendChild(divBty);
-     function getData() {
-         let params1 = `[${inputdata},${searchData},${cookies},"3c156b221d634851a79b446ad23246ec"]`;
-         console.log(params1)
-         let options = {
-             "widgetName":"searchOffer",
-             "methodName":"searchCustForFixedAccNum",
-             "params":params1,
-             "selector":"#searchList",
-             "keyName":""
-         };
-         console.log(options);
-         const xhr = new XMLHttpRequest();
-         xhr.onreadystatechange = callback1;
-         xhr.open("post", "http://crm3.yn.189.cn:9500/crm/so/refreshPart",true);
-         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-         xhr.send(options);
-
-         function callback1() {
-             if (xhr.readyState == 4 && xhr.status == 200) {
-                 let data = xhr.responseText;//获取数据
-                 console(data);
-                 // let answerObj =
-                 let dataCard = "";
-                 const card = myObj.contentWindow.document.querySelector("#certNumSuffix");
-                 if(card != null){
-                     card.value = dataCard;
-                     dataCard.removeAttribute('disabled');
-                 }
-             }
-         }
-     }
+    // let divObj = myObj.contentWindow.document.querySelector("#content1");
+    // console.log(divObj);
+    // divObj.onclick =
+    // let divBty = myObj.contentWindow.document.createElement("input");
+    // divBty.setAttribute("type", "button");
+    // divBty.setAttribute("value", "数据");
+    // divBty.setAttribute("id", "divBty");
+    // divBty.style.width = "15px";
+    // divBty.setAttribute("onclick", "getData()");
+    // divObj.appendChild(divBty);
+    //  function getData() {
+    //      let params1 = `[${inputdata},${searchData},${cookies},"3c156b221d634851a79b446ad23246ec"]`;
+    //      console.log(params1)
+    //      let options = {
+    //          "widgetName":"searchOffer",
+    //          "methodName":"searchCustForFixedAccNum",
+    //          "params":params1,
+    //          "selector":"#searchList",
+    //          "keyName":""
+    //      };
+    //      console.log(options);
+    //      const xhr = new XMLHttpRequest();
+    //      xhr.onreadystatechange = callback1;
+    //      xhr.open("post", "http://crm3.yn.189.cn:9500/crm/so/refreshPart",true);
+    //      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    //      xhr.send(options);
+    //
+    //      function callback1() {
+    //          if (xhr.readyState == 4 && xhr.status == 200) {
+    //              let data = xhr.responseText;//获取数据
+    //              console(data);
+    //              // let answerObj =
+    //              let dataCard = "";
+    //              const card = myObj.contentWindow.document.querySelector("#certNumSuffix");
+    //              if(card != null){
+    //                  card.value = dataCard;
+    //                  dataCard.removeAttribute('disabled');
+    //              }
+    //          }
+    //      }
+    //  }
 })();
