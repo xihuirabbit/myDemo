@@ -24,14 +24,14 @@
 
     // 搜索项选择
     console.log(myObj.contentWindow.document.querySelector("#multSearchType"));
-    let searchBty = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("button");
+    let searchBty = myObj.contentWindow.document.querySelector("#multSearchType");
     console.log(searchBty);
-    let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
-    console.log(searchObj);
-    let searchData = "";
+    let searchData = "accNbr";
     searchBty.onclick = function () {
+        let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
+        console.log(searchObj);
         if(searchObj){
-            searchData = "";
+            searchData = searchObj[0].getAttribute("data-type");
             console.log(searchData);
         }
     }
@@ -67,6 +67,7 @@
              if (xhr.readyState == 4 && xhr.status == 200) {
                  let data = xhr.responseText;//获取数据
                  console(data);
+                 // let answerObj =
                  let dataCard = "";
                  const card = myObj.contentWindow.document.querySelector("#certNumSuffix");
                  if(card != null){
