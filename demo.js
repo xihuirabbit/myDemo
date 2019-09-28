@@ -28,7 +28,7 @@
     // 搜索项选择
     let searchData = "accNbr";
     let divObj = "";
-    let seacchBty = myObj.contentWindow.document.getElementsByClassName("yn-search-ico")[0].innerHTML;
+    let seacchBty = myObj.contentWindow.document.getElementsByClassName("yn-search-ico")[0];
     console.log(seacchBty);
     if(seacchBty){
         seacchBty.onclick = function () {
