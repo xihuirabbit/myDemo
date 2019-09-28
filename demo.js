@@ -10,10 +10,18 @@
     let myObj = document.getElementById("ifrPage100002");
     console.log(myObj);
 
-    //输入框存储
+    //输入框s数据
     let inputObj  = myObj.contentWindow.document.querySelector("#qryCustomerInputStr");
-    console.log(inputObj)
-    let inputdata = inputObj.value;
-    console.log(inputdata)
+    console.log(inputObj);
+    let inputdata = "";
+    inputObj.onchange = function () {
+        inputdata = inputObj.value;
+        console.log(inputdata)
+    }
 
+
+    // 搜索项选择
+    console.log(myObj.contentWindow.document.querySelector("#multSearchType"));
+    let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
+    console.log(searchObj)
 })();
