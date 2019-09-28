@@ -29,7 +29,9 @@
             // 存储搜多类型
             let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
             console.log(searchObj);
-            searchData = searchObj[0].getAttribute("data-type");
+            if( searchObj[0].getAttribute("data-type")){
+                searchData = searchObj[0].getAttribute("data-type");
+            }
             console.log(searchData);
 
             // 点击获取接口数据
