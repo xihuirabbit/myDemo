@@ -24,7 +24,7 @@
 
     // 搜索项选择
     let searchDiv = myObj.contentWindow.document.querySelector("#mainContent");
-    console.log(searchBty);
+    console.log(searchDiv);
     let searchData = "accNbr";
     if(searchDiv){
         searchDiv.onclick = function () {
