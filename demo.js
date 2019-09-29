@@ -86,7 +86,7 @@
                 let cardList1 = JSON.stringify(data).split("\\");
                     console.log(cardList1)
                 let cardList2 = [];
-                for(let i = 0;i<cardList1.length-1;i++){
+                for(let i in cardList1){
                     if(cardList1[i].includes(answerData)){
                         cardList2.push[cardList1[i]];
                     }
