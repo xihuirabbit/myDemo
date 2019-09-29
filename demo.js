@@ -87,10 +87,14 @@
             xhr.onreadystatechange = callback1;
             xhr.open("post", "http://crm3.yn.189.cn:9500/crm/so/refreshPart",true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.send("widgetName="+"searchOffer"+"&methodName="+methodName+"&params="+params1+"&selector="+"#searchList"+"&keyName="+"");
+            if(page >1){
+                xhr.send("widgetName="+"searchOffer"+"&methodName="+methodName+"&params="+params1+"&selector="+"#searchList");
+            }else{
+                xhr.send("widgetName="+"searchOffer"+"&methodName="+methodName+"&params="+params1+"&selector="+"#searchList"+"&keyName="+"");
+            }
+
 
             function callback1() {
-                console.log("aa")
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     let data = xhr.responseText;//获取数据
                     console.log(JSON.stringify(data));
@@ -107,6 +111,7 @@
                     let dataCard = cardList2[1].substring(cardList2[1].length-6);
                     let card = myObj.contentWindow.document.querySelector("#certNumSuffix");
                     console.log(card);
+                    console.log(dataCard)
                     if(card != null){
                         card.value = dataCard;
                         card.removeAttribute('disabled');
