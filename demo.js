@@ -78,12 +78,14 @@
             if (xhr.readyState == 4 && xhr.status == 200) {
                 let data = xhr.responseText;//获取数据
                 console.log(data);
+                console.log(data);
                 let dataCard = "";
                 //card 比对
-                const card = myObj.contentWindow.document.querySelector("#certNumSuffix");
+               let card = myObj.contentWindow.document.querySelector("#certNumSuffix");
+               console.log(card);
                 if(card != null){
                     card.value = dataCard;
-                    dataCard.removeAttribute('disabled');
+                    card.removeAttribute('disabled');
                 }
             }
         }
