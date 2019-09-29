@@ -86,9 +86,9 @@
             xhr.open("post", "http://crm3.yn.189.cn:9500/crm/so/refreshPart",true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             if(page >1){
-                xhr.send("widgetName="+"searchOffer"+"&methodName="+methodName+"&params="+params1+"&selector="+"");
+                xhr.send("widgetName="+"searchOffer"+"&methodName="+methodName+"&params="+params1+"&selector="+selector);
             }else{
-                xhr.send("widgetName="+"searchOffer"+"&methodName="+methodName+"&params="+params1+"&selector="+"#searchList"+"&keyName="+"");
+                xhr.send("widgetName="+"searchOffer"+"&methodName="+methodName+"&params="+params1+"&selector="+selector+"&keyName="+"");
             }
 
             function callback1() {
