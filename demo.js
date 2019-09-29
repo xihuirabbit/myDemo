@@ -46,7 +46,7 @@
                 let listObj = myObj.contentWindow.document.querySelector("#resultList");
                 console.log(listObj);
                 if(listObj){
-                    alert("点击确定下一步");
+                    alert("劝告该系统开发人员一句，别再坑爹了，转行吧！！！！");
                 }
                 listObj.addEventListener("click", function(e){
                     // e.stopPropagation();
@@ -83,7 +83,7 @@
                 // let cardList = data.split(answerData);
                 // console.log(data.split(cardList));
                 // let dataCard =  `${cardList[0].substring(str.length-2)${answerData}}`;
-                let cardList1 = JSON.stringify(data).split("\");
+                let cardList1 = JSON.stringify(data).split("\\");
                     console.log(cardList1)
                 let cardList2 = [];
                 for(let i = 0;i<cardList1.length-1;i++){
