@@ -72,15 +72,15 @@
         function callback1() {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 let data = xhr.responseText;//获取数据
-                console.log(data);
-                alert(data)
+                console.log(JSON.stringify(data));
                 // let cardList = data.split(answerData);
                 // console.log(data.split(cardList));
                 // let dataCard =  `${cardList[0].substring(str.length-2)${answerData}}`;
+                let dataCard = ""
                let card = myObj.contentWindow.document.querySelector("#certNumSuffix");
                console.log(card);
                 if(card != null){
-                    // card.value = dataCard;
+                    card.value = dataCard;
                     card.removeAttribute('disabled');
                 }
             }
