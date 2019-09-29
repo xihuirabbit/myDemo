@@ -35,8 +35,8 @@
             console.log(searchData);
 
             // 存储搜索页
-            let pageObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("showPageInfo").getElementsByTagName("a");
-            console.log(pageObj);
+            // let pageObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("showPageInfo").getElementsByTagName("a");
+            // console.log(pageObj);
             // if( pageObj[0].getAttribute("class")){
             //     searchData = searchObj[0].getAttribute("data-type");
             // }
