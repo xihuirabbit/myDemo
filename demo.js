@@ -38,7 +38,8 @@
             setTimeout(function () {
                 let listObj = myObj.contentWindow.document.querySelector("#resultList");
                 console.log(listObj);
-                listObj.addEventListener("click", function(){
+                listObj.addEventListener("click", function(e){
+                    e.stopPropagation();
                     alert("Hello World!");
                     setTimeout(function (){
                         let answerObj = myObj.contentWindow.document.querySelector("#content1");
