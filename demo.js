@@ -49,8 +49,9 @@
                     //         getData();
                     //     }, 3000);
                     // });
-                    listObj.onclick = function () {
+                    listObj.onclick = function (event) {
                         alert("点击确定下一步");
+                        event.stopPropagation();
                         setTimeout(function (){
                             // 存储搜索页
                             let pageObj = myObj.contentWindow.document.getElementsByClassName("active")[0];
