@@ -40,17 +40,16 @@
                 console.log(listObj);
                 listObj.addEventListener("click", function(){
                     alert("Hello World!");
-                    let answerObj = myObj.contentWindow.document.querySelector("#content1");
-                    console.log(answerObj)
-                    let answerdatas = answerObj.getElementsByTagName("span")[0].innerHTML;
-                    console.log(answerdatas);
-                    let num = answerdatas.split("");
-                    let answerData = `${num[num.length-4]}${num[num.length-3]}${num[num.length-2]}${num[num.length-1]}`;
-                    console.log(answerData);
-                    getData(answerData);
-                    // setTimeout(function (){
-                    //
-                    // }, 5000);
+                    setTimeout(function (){
+                        let answerObj = myObj.contentWindow.document.querySelector("#content1");
+                        console.log(answerObj)
+                        let answerdatas = answerObj.getElementsByTagName("span")[0].innerHTML;
+                        console.log(answerdatas);
+                        let num = answerdatas.split("");
+                        let answerData = `${num[num.length-4]}${num[num.length-3]}${num[num.length-2]}${num[num.length-1]}`;
+                        console.log(answerData);
+                        getData(answerData);
+                    }, 3000);
                 });
             },2000)
 
