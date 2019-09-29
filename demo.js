@@ -16,7 +16,7 @@
         let seacchBty = myObj.contentWindow.document.getElementsByClassName("yn-search-ico")[0];
         if(seacchBty){
             alert("点击确定请开始你的表演");
-            seacchBty.onclick = function () {
+            seacchBty.addEventListener("ckick",function () {
                 let inputObj  = myObj.contentWindow.document.querySelector("#qryCustomerInputStr");
                 if(inputObj){
                     inputdata = inputObj.value;
@@ -45,14 +45,12 @@
                             let answerObj = myObj.contentWindow.document.querySelector("#content1");
                             let answerdatas = answerObj.getElementsByTagName("span")[0].innerHTML;
                             let num = answerdatas.split("");
-                             answerData = `${num[num.length-4]}${num[num.length-3]}${num[num.length-2]}${num[num.length-1]}`;
+                            answerData = `${num[num.length-4]}${num[num.length-3]}${num[num.length-2]}${num[num.length-1]}`;
                             getData();
                         }, 3000);
                     });
                 },2000)
-
-
-            }
+            })
         };
         function getData() {
             let params1 = "";
