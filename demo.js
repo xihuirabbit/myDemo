@@ -38,6 +38,9 @@
             setTimeout(function () {
                 let listObj = myObj.contentWindow.document.querySelector("#resultList");
                 console.log(listObj);
+                if(listObj){
+                    alert("点击确定下一步");
+                }
                 listObj.addEventListener("click", function(e){
                     // e.stopPropagation();
                     alert("Hello World!");
@@ -70,7 +73,7 @@
             if (xhr.readyState == 4 && xhr.status == 200) {
                 let data = xhr.responseText;//获取数据
                 console.log(data);
-                console.log(data.split("vita-data"));
+                console.log(data.split(answerData));
                 let dataCard = "";
                 //card 比对
                let card = myObj.contentWindow.document.querySelector("#certNumSuffix");
