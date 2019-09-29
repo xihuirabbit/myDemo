@@ -15,6 +15,7 @@
         let searchData = "accNbr";
         let listObj = "";
         let page = "";
+        let answerData = ""
 
         let seacchBty = myObj.contentWindow.document.getElementsByClassName("yn-search-ico")[0];
         console.log(seacchBty)
@@ -60,7 +61,7 @@
                             let answerdatas = answerObj.getElementsByTagName("span")[0].innerHTML;
                             console.log(answerdatas);
                             let num = answerdatas.split("");
-                            let answerData = `${num[num.length-4]}${num[num.length-3]}${num[num.length-2]}${num[num.length-1]}`;
+                             answerData = `${num[num.length-4]}${num[num.length-3]}${num[num.length-2]}${num[num.length-1]}`;
                             console.log(answerData);
                             getData(answerData);
                         }, 3000);
@@ -70,7 +71,7 @@
 
             }
         };
-        function getData(answerData) {
+        function getData() {
             let params1 = "";
             let methodName = "";
             if(page >1){
@@ -83,33 +84,33 @@
 
             console.log(params1)
             const xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = callback1(answerData);
+            xhr.onreadystatechange = callback1;
             xhr.open("post", "http://crm3.yn.189.cn:9500/crm/so/refreshPart",true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xhr.send("widgetName="+"searchOffer"+"&methodName="+methodName+"&params="+params1+"&selector="+"#searchList"+"&keyName="+"");
 
-            function callback1(answerData) {
+            function callback1() {
                 console.log("aa")
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     let data = xhr.responseText;//获取数据
                     console.log(JSON.stringify(data));
                     let cardList1 = JSON.stringify(data).split("\\");
                     console.log(cardList1)
-                    // let cardList2 = [];
-                    // for(let i in cardList1){
-                    //     console.log(cardList1[i].replace('"', ''));
-                    //     if(cardList1[i].replace('"', '').search(answerData) != -1){
-                    //         cardList2.push[cardList1[i]];
-                    //     }
-                    // }
-                    // console.log(cardList2)
-                    // let dataCard = ""
-                    // let card = myObj.contentWindow.document.querySelector("#certNumSuffix");
-                    // console.log(card);
-                    // if(card != null){
-                    //     card.value = dataCard;
-                    //     card.removeAttribute('disabled');
-                    // }
+                    let cardList2 = [];
+                    for(let i in cardList1){
+                        console.log(cardList1[i].replace('"', ''));
+                        if(cardList1[i].replace('"', '').search(answerData) != -1){
+                            cardList2.push[cardList1[i]];
+                        }
+                    }
+                    console.log(cardList2)
+                    let dataCard = ""
+                    let card = myObj.contentWindow.document.querySelector("#certNumSuffix");
+                    console.log(card);
+                    if(card != null){
+                        card.value = dataCard;
+                        card.removeAttribute('disabled');
+                    }
                 }
             }
         }
