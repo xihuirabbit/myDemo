@@ -89,29 +89,27 @@
             xhr.send("widgetName="+"searchOffer"+"&methodName="+methodName+"&params="+params1+"&selector="+"#searchList"+"&keyName="+"");
 
             function callback1(answerData) {
+                console.log("aa")
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     let data = xhr.responseText;//获取数据
                     console.log(JSON.stringify(data));
-                    // let cardList = data.split(answerData);
-                    // console.log(data.split(cardList));
-                    // let dataCard =  `${cardList[0].substring(str.length-2)${answerData}}`;
                     let cardList1 = JSON.stringify(data).split("\\");
                     console.log(cardList1)
-                    let cardList2 = [];
-                    for(let i in cardList1){
-                        console.log(cardList1[i].replace('"', ''));
-                        if(cardList1[i].replace('"', '').search(answerData) != -1){
-                            cardList2.push[cardList1[i]];
-                        }
-                    }
-                    console.log(cardList2)
-                    let dataCard = ""
-                    let card = myObj.contentWindow.document.querySelector("#certNumSuffix");
-                    console.log(card);
-                    if(card != null){
-                        card.value = dataCard;
-                        card.removeAttribute('disabled');
-                    }
+                    // let cardList2 = [];
+                    // for(let i in cardList1){
+                    //     console.log(cardList1[i].replace('"', ''));
+                    //     if(cardList1[i].replace('"', '').search(answerData) != -1){
+                    //         cardList2.push[cardList1[i]];
+                    //     }
+                    // }
+                    // console.log(cardList2)
+                    // let dataCard = ""
+                    // let card = myObj.contentWindow.document.querySelector("#certNumSuffix");
+                    // console.log(card);
+                    // if(card != null){
+                    //     card.value = dataCard;
+                    //     card.removeAttribute('disabled');
+                    // }
                 }
             }
         }
