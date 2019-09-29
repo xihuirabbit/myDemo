@@ -16,17 +16,16 @@
         let seacchBty = myObj.contentWindow.document.getElementsByClassName("yn-search-ico")[0];
         if(seacchBty){
             alert("点击确定请开始你的表演");
-            let inputObj  = myObj.contentWindow.document.querySelector("#qryCustomerInputStr");
-            if(inputObj){
-                inputdata = inputObj.value;
-            }
-
-            let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
-            if( searchObj[0].getAttribute("data-type")){
-                searchData = searchObj[0].getAttribute("data-type");
-            }
-
             setTimeout(function () {
+                let inputObj  = myObj.contentWindow.document.querySelector("#qryCustomerInputStr");
+                if(inputObj){
+                    inputdata = inputObj.value;
+                }
+
+                let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
+                if( searchObj[0].getAttribute("data-type")){
+                    searchData = searchObj[0].getAttribute("data-type");
+                }
                 let listObj = myObj.contentWindow.document.querySelector("#resultList");
                 if(listObj){
                     alert("劝告该系统开发人员一句，别再坑爹了，转行吧！！！！");
