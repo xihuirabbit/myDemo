@@ -72,7 +72,7 @@
         xhr.onreadystatechange = callback1;
         xhr.open("post", "http://crm3.yn.189.cn:9500/crm/so/refreshPart",true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.send(data);
+        xhr.send("widgetName="+"searchOffer"+"&methodName="+"searchCustForFixedAccNum"+"&params"+params1+"&selector="+"#searchList"+"&keyName="+"");
 
         function callback1() {
             if (xhr.readyState == 4 && xhr.status == 200) {
