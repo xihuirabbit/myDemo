@@ -100,7 +100,7 @@
                     for(let i in cardList1){
                         console.log(cardList1[i].replace('"', ''));
                         console.log(answerData);
-                        if(cardList1[i].includes(answerData)){
+                        if(cardList1[i].replace('"', '').includes(answerData)){
                             cardList2.push[cardList1[i]];
                         }
                     }
