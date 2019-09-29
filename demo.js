@@ -32,39 +32,23 @@
                     if(listObj){
                         alert("劝告该系统开发人员一句，别再坑爹了，转行吧！！！！");
                     }
-                    // listObj.addEventListener("click", function(e){
-                    //     // e.stopPropagation();
-                    //     alert("点击确定下一步");
-                    //     setTimeout(function (){
-                    //         // 存储搜索页
-                    //         let pageObj = myObj.contentWindow.document.getElementsByClassName("active")[0];
-                    //         if(pageObj){
-                    //             page = pageObj.innerHTML;
-                    //         }
-                    //
-                    //         let answerObj = myObj.contentWindow.document.querySelector("#content1");
-                    //         let answerdatas = answerObj.getElementsByTagName("span")[0].innerHTML;
-                    //         let num = answerdatas.split("");
-                    //          answerData = `${num[num.length-4]}${num[num.length-3]}${num[num.length-2]}${num[num.length-1]}`;
-                    //         getData();
-                    //     }, 3000);
-                    // });
-                    listObj.onclick = function (event) {
+                    listObj.addEventListener("click", function(e){
+                        // e.stopPropagation();
                         alert("点击确定下一步");
-                        event.stopPropagation();
                         setTimeout(function (){
                             // 存储搜索页
                             let pageObj = myObj.contentWindow.document.getElementsByClassName("active")[0];
                             if(pageObj){
                                 page = pageObj.innerHTML;
                             }
+
                             let answerObj = myObj.contentWindow.document.querySelector("#content1");
                             let answerdatas = answerObj.getElementsByTagName("span")[0].innerHTML;
                             let num = answerdatas.split("");
-                            answerData = `${num[num.length-4]}${num[num.length-3]}${num[num.length-2]}${num[num.length-1]}`;
+                             answerData = `${num[num.length-4]}${num[num.length-3]}${num[num.length-2]}${num[num.length-1]}`;
                             getData();
                         }, 3000);
-                    }
+                    });
                 },2000)
 
 
