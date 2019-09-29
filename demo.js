@@ -60,14 +60,6 @@
     function getData(answerData) {
         let params1 = `["${inputdata}","${searchData}","${cookies}","3c156b221d634851a79b446ad23246ec"]`;
         console.log(params1)
-        // let data = {
-        //     "widgetName":"searchOffer",
-        //     "methodName":"searchCustForFixedAccNum",
-        //     "params":params1,
-        //     "selector":"#searchList",
-        //     "keyName":""
-        // };
-        // console.log(data);
         const xhr = new XMLHttpRequest();
         xhr.onreadystatechange = callback1;
         xhr.open("post", "http://crm3.yn.189.cn:9500/crm/so/refreshPart",true);
@@ -78,7 +70,7 @@
             if (xhr.readyState == 4 && xhr.status == 200) {
                 let data = xhr.responseText;//获取数据
                 console.log(data);
-                console.log(data);
+                console.log(data.split("vita-data"));
                 let dataCard = "";
                 //card 比对
                let card = myObj.contentWindow.document.querySelector("#certNumSuffix");
