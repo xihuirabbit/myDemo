@@ -67,7 +67,7 @@
             "selector":"#searchList",
             "keyName":""
         };
-        console.log(options);
+        console.log(data);
         const xhr = new XMLHttpRequest();
         xhr.onreadystatechange = callback1;
         xhr.open("post", "http://crm3.yn.189.cn:9500/crm/so/refreshPart",true);
