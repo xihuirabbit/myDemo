@@ -73,9 +73,9 @@
         function getData(answerData) {
             let params1 = "";
             if(page >1){
-                params1 = `["${inputdata}","${searchData}","${cookies}","3c156b221d634851a79b446ad23246ec"]`;
-            }else{
                 params1 = `["${inputdata}","${searchData}","${cookies}","${page}"，"10""3c156b221d634851a79b446ad23246ec"]`;
+            }else{
+                params1 = `["${inputdata}","${searchData}","${cookies}","3c156b221d634851a79b446ad23246ec"]`;
             }
 
             console.log(params1)
