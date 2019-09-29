@@ -83,8 +83,15 @@
                 // let cardList = data.split(answerData);
                 // console.log(data.split(cardList));
                 // let dataCard =  `${cardList[0].substring(str.length-2)${answerData}}`;
-                let cardList1 = data.split("\");
+                let cardList1 = JSON.stringify(data).split("\");
                     console.log(cardList1)
+                let cardList2 = [];
+                for(let i = 0;i<cardList1.length-1;i++){
+                    if(cardList1[i].includes(answerData)){
+                        cardList2.push[cardList1[i]];
+                    }
+                }
+                console.log(cardList2)
                 let dataCard = ""
                let card = myObj.contentWindow.document.querySelector("#certNumSuffix");
                console.log(card);
