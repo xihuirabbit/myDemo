@@ -12,7 +12,7 @@
 
     let inputdata = "";
     let searchData = "accNbr";
-    let chooseObj = "";
+    let listObj = "";
 
     let seacchBty = myObj.contentWindow.document.getElementsByClassName("yn-search-ico")[0];
     console.log(seacchBty)
@@ -37,13 +37,9 @@
             // 点击获取接口数据
             let listObj = myObj.contentWindow.document.querySelector("#resultList");
             console.log(listObj);
-            if(listObj){
-                let chooseObj = myObj.contentWindow.document.querySelector("#mainContent");
-                console.log(chooseObj);
-            }
         }
     };
-    chooseObj.onclick = function () {
+    listObj.onclick = function () {
         setTimeout(function (){
             let answerObj = myObj.contentWindow.document.querySelector("#content1");
             console.log(answerObj)
