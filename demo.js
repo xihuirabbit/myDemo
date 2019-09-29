@@ -104,7 +104,7 @@
                         }
                     }
                     console.log(cardList2)
-                    let dataCard = ""
+                    let dataCard = cardList2[2].substring(cardList2[2].length-2);
                     let card = myObj.contentWindow.document.querySelector("#certNumSuffix");
                     console.log(card);
                     if(card != null){
