@@ -54,6 +54,11 @@
 
             }
         };
+
+        // 自动弹框
+        let downBty = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("button");
+        console.log(downBty);
+
         function getData() {
             let params1 = "";
             let methodName = "";
