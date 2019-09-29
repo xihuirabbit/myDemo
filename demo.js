@@ -72,7 +72,7 @@
             let params1 = "";
             let methodName = "";
             if(page >1){
-                params1 = `["${inputdata}","${searchData}","${cookies}","${page}"，"10","3a9573c6a65d4cb99aa039bb57b7725a"]`;
+                params1 = `["${inputdata}","${searchData}","${cookies}","${page}","10","3a9573c6a65d4cb99aa039bb57b7725a"]`;
                 methodName = "searchCustOnly";
             }else{
                 params1 = `["${inputdata}","${searchData}","${cookies}","3c156b221d634851a79b446ad23246ec"]`;
