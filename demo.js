@@ -12,7 +12,7 @@
 
     let inputdata = "";
     let searchData = "accNbr";
-    let listObj = "";
+    let chooseObj = "";
 
     let seacchBty = myObj.contentWindow.document.getElementsByClassName("yn-search-ico")[0];
     console.log(seacchBty)
@@ -35,25 +35,25 @@
             console.log(searchData);
 
             // 点击获取接口数据
-            listObj = myObj.contentWindow.document.querySelector("#resultList");
+            let listObj = myObj.contentWindow.document.querySelector("#resultList");
             console.log(listObj);
+            if(listObj){
+                let chooseObj = myObj.contentWindow.document.querySelector("#mainContent");
+                console.log(chooseObj);
+            }
         }
     };
-    listObj.onclick = function () {
-        let chooseObj = myObj.contentWindow.document.querySelector("#mainContent");
-        console.log(chooseObj);
-        chooseObj.onclick = function () {
-            setTimeout(function (){
-              let answerObj = myObj.contentWindow.document.querySelector("#content1");
-              console.log(answerObj)
-              let answerdatas = answerObj.getElementsByTagName("span")[0].innerHTML;
-              console.log(answerdatas);
-              let num = answerdatas.split("");
-              let answerData = `${num[num.length-4]}${num[num.length-3]}${num[num.length-2]}${num[num.length-1]}`;
-              console.log(answerData);
-                getData(answerData);
-            }, 5000);
-        }
+    chooseObj.onclick = function () {
+        setTimeout(function (){
+            let answerObj = myObj.contentWindow.document.querySelector("#content1");
+            console.log(answerObj)
+            let answerdatas = answerObj.getElementsByTagName("span")[0].innerHTML;
+            console.log(answerdatas);
+            let num = answerdatas.split("");
+            let answerData = `${num[num.length-4]}${num[num.length-3]}${num[num.length-2]}${num[num.length-1]}`;
+            console.log(answerData);
+            getData(answerData);
+        }, 5000);
     }
     function getData(answerData) {
         let params1 = `[${inputdata},${searchData},${cookies},"3c156b221d634851a79b446ad23246ec"]`;
