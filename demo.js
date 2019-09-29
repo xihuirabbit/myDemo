@@ -21,13 +21,14 @@
             }
         };
         // 自动弹框
-        let downBty = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("button");
+        let downBty = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("button")[0];
         console.log(downBty);
         if(downBty){
             downBty.onclick = function () {
+                alert("傻逼开发的锅，请等待....");
                setTimeout(function () {
-                   alert("傻逼开发的锅，点击确定下一步");
-                   jumpPage()
+                   alert("点击确定下一步");
+                   jumpPage();
                },4000)
 
             }
