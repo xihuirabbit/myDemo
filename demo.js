@@ -99,7 +99,8 @@
                     let cardList2 = [];
                     for(let i in cardList1){
                         if(cardList1[i].replace('"', '').includes(answerData.toString())){
-                            cardList2.push[cardList1[i]];
+                            console.log(cardList2)
+                            cardList2.push(cardList1[i].replace('"', ''));
                         }
                     }
                     console.log(cardList2)
