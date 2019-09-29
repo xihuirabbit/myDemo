@@ -57,7 +57,7 @@
         }
     };
     function getData(answerData) {
-        let params1 = `[${inputdata},${searchData},${cookies},"3c156b221d634851a79b446ad23246ec"]`;
+        let params1 = `["${inputdata}","${searchData}","${cookies}","3c156b221d634851a79b446ad23246ec"]`;
         console.log(params1)
         let options = {
             "widgetName":"searchOffer",
@@ -71,7 +71,7 @@
         xhr.onreadystatechange = callback1;
         xhr.open("post", "http://crm3.yn.189.cn:9500/crm/so/refreshPart",true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.send(options);
+        xhr.send(JOSN.stringify(options));
 
         function callback1() {
             if (xhr.readyState == 4 && xhr.status == 200) {
