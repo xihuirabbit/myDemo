@@ -188,18 +188,22 @@ window.onload = function () {
         };
         function getData(answerData) {
             let params1 = "";
+            let methodName = "";
             if(page >1){
                 params1 = `["${inputdata}","${searchData}","${cookies}","${page}"，"10""3c156b221d634851a79b446ad23246ec"]`;
+                methodName = "searchCustOnly";
             }else{
                 params1 = `["${inputdata}","${searchData}","${cookies}","3c156b221d634851a79b446ad23246ec"]`;
+                methodName = "searchCustForFixedAccNum";
             }
+
 
             console.log(params1)
             const xhr = new XMLHttpRequest();
             xhr.onreadystatechange = callback1(answerData);
             xhr.open("post", "http://crm3.yn.189.cn:9500/crm/so/refreshPart",true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.send("widgetName="+"searchOffer"+"&methodName="+"searchCustForFixedAccNum"+"&params="+params1+"&selector="+"#searchList"+"&keyName="+"");
+            xhr.send("widgetName="+"searchOffer"+"&methodName="+methodName+"&params="+params1+"&selector="+"#searchList"+"&keyName="+"");
 
             function callback1(answerData) {
                 if (xhr.readyState == 4 && xhr.status == 200) {
