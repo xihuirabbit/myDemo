@@ -36,14 +36,6 @@
                 }
                 console.log(searchData);
 
-                // 存储搜索页
-                let pageObj = myObj.contentWindow.document.getElementsByClassName("active")[0]
-                console.log(pageObj);
-                if(pageObj){
-                    page = pageObj.innerHTML;
-                    console.log(page)
-                }
-
                 // 点击获取接口数据
                 setTimeout(function () {
                     let listObj = myObj.contentWindow.document.querySelector("#resultList");
@@ -55,6 +47,14 @@
                         // e.stopPropagation();
                         alert("Hello World!");
                         setTimeout(function (){
+                            // 存储搜索页
+                            let pageObj = myObj.contentWindow.document.getElementsByClassName("active")[0];
+                            console.log(pageObj);
+                            if(pageObj){
+                                page = pageObj.innerHTML;
+                                console.log(page)
+                            }
+
                             let answerObj = myObj.contentWindow.document.querySelector("#content1");
                             console.log(answerObj)
                             let answerdatas = answerObj.getElementsByTagName("span")[0].innerHTML;
