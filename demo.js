@@ -73,9 +73,9 @@
             if (xhr.readyState == 4 && xhr.status == 200) {
                 let data = xhr.responseText;//获取数据
                 console.log(data);
-                console.log(data.split(answerData));
-                let dataCard = "";
-                //card 比对
+                let cardList = data.split(answerData);
+                console.log(data.split(cardList));
+                let dataCard =  `${cardList[0].substring(str.length-2)${answerData}}`;
                let card = myObj.contentWindow.document.querySelector("#certNumSuffix");
                console.log(card);
                 if(card != null){
