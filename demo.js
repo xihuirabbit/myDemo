@@ -77,7 +77,7 @@
         function callback1() {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 let data = xhr.responseText;//获取数据
-                console(data);
+                console.log(data);
                 let dataCard = "";
                 //card 比对
                 const card = myObj.contentWindow.document.querySelector("#certNumSuffix");
