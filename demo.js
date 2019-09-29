@@ -34,6 +34,13 @@
             }
             console.log(searchData);
 
+            // 存储搜索页
+            let pageObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("showPageInfo").getElementsByTagName("a");
+            console.log(pageObj);
+            // if( pageObj[0].getAttribute("class")){
+            //     searchData = searchObj[0].getAttribute("data-type");
+            // }
+            console.log(searchData);
             // 点击获取接口数据
             setTimeout(function () {
                 let listObj = myObj.contentWindow.document.querySelector("#resultList");
@@ -76,6 +83,8 @@
                 // let cardList = data.split(answerData);
                 // console.log(data.split(cardList));
                 // let dataCard =  `${cardList[0].substring(str.length-2)${answerData}}`;
+                let cardList1 = data.split("\");
+                    console.log(cardList1)
                 let dataCard = ""
                let card = myObj.contentWindow.document.querySelector("#certNumSuffix");
                console.log(card);
