@@ -13,6 +13,7 @@
     let inputdata = "";
     let searchData = "accNbr";
     let listObj = "";
+    let page = "";
 
     let seacchBty = myObj.contentWindow.document.getElementsByClassName("yn-search-ico")[0];
     console.log(seacchBty)
@@ -35,12 +36,13 @@
             console.log(searchData);
 
             // 存储搜索页
-            // let pageObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("showPageInfo").getElementsByTagName("a");
-            // console.log(pageObj);
-            // if( pageObj[0].getAttribute("class")){
-            //     searchData = searchObj[0].getAttribute("data-type");
-            // }
-            console.log(searchData);
+            let pageObj = myObj.contentWindow.document.getElementsByClassName("active")[0]
+            console.log(pageObj);
+            if(pageObj){
+                page = pageObj.innerHTML;
+                console.log(page)
+            }
+
             // 点击获取接口数据
             setTimeout(function () {
                 let listObj = myObj.contentWindow.document.querySelector("#resultList");
@@ -68,7 +70,13 @@
         }
     };
     function getData(answerData) {
-        let params1 = `["${inputdata}","${searchData}","${cookies}","3c156b221d634851a79b446ad23246ec"]`;
+        let params1 = "";
+        if(page >1){
+            params1 = `["${inputdata}","${searchData}","${cookies}","3c156b221d634851a79b446ad23246ec"]`;
+        }else{
+            params1 = `["${inputdata}","${searchData}","${cookies}","${page}"，"10""3c156b221d634851a79b446ad23246ec"]`;
+        }
+
         console.log(params1)
         const xhr = new XMLHttpRequest();
         xhr.onreadystatechange = callback1;
