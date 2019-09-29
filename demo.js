@@ -95,7 +95,7 @@
                     console.log(cardList1)
                 let cardList2 = [];
                 for(let i in cardList1){
-                    console.log(cardList1[i]);
+                    console.log(cardList1[i].replace('"', ''));
                     if(cardList1[i].replace('"', '').includes(answerData)){
                         cardList2.push[cardList1[i]];
                     }
