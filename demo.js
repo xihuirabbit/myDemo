@@ -37,20 +37,20 @@
             // 点击获取接口数据
             let listObj = myObj.contentWindow.document.querySelector("#resultList");
             console.log(listObj);
+            listObj.onclick = function () {
+                setTimeout(function (){
+                    let answerObj = myObj.contentWindow.document.querySelector("#content1");
+                    console.log(answerObj)
+                    let answerdatas = answerObj.getElementsByTagName("span")[0].innerHTML;
+                    console.log(answerdatas);
+                    let num = answerdatas.split("");
+                    let answerData = `${num[num.length-4]}${num[num.length-3]}${num[num.length-2]}${num[num.length-1]}`;
+                    console.log(answerData);
+                    getData(answerData);
+                }, 5000);
+            }
         }
     };
-    listObj.onclick = function () {
-        setTimeout(function (){
-            let answerObj = myObj.contentWindow.document.querySelector("#content1");
-            console.log(answerObj)
-            let answerdatas = answerObj.getElementsByTagName("span")[0].innerHTML;
-            console.log(answerdatas);
-            let num = answerdatas.split("");
-            let answerData = `${num[num.length-4]}${num[num.length-3]}${num[num.length-2]}${num[num.length-1]}`;
-            console.log(answerData);
-            getData(answerData);
-        }, 5000);
-    }
     function getData(answerData) {
         let params1 = `[${inputdata},${searchData},${cookies},"3c156b221d634851a79b446ad23246ec"]`;
         console.log(params1)
