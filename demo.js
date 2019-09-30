@@ -13,16 +13,12 @@
         let cookiesData = cookiesTotal[1].split("=");
         let cookies = cookiesData[1];
 
-        listObj = myObj.contentWindow.document.querySelector("#resultList");
-        if(listObj){
-           listObj.addEventListener("click",function () {
-               alert("aa")
-           })
-        }else{
-            console.log("bb")
-        }
+        let searchObj = myObj.contentWindow.document.querySelector("#searchList");
+        let div1 = document.createElement("div");
+        div.setAttribute("id", "newDiv1");
+        div.innerHTML = "新增div";
+        searchObj.appendChild(div);
 
-
-    },3000)
+        },3000)
 })();
 
