@@ -14,11 +14,8 @@
         let cookiesData = cookiesTotal[1].split("=");
         let cookies = cookiesData[1];
 
-        let searchObj = myObj.contentWindow.document.querySelector("#searchList");
-        let div1 = document.createElement("div");
-        div1.setAttribute("id", "newDiv1");
-        div1.innerHTML = "新增div";
-        searchObj.appendChild(div1);
+        listObj = myObj.contentWindow.document.querySelector("#resultList");
+        console.log(listObj)
 
         },3000)
 })();
