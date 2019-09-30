@@ -37,17 +37,17 @@
         console.log(downBty.getElementsByTagName("a"));
         let aData = downBty.getElementsByTagName("a");
         for(let i = 0;i<aData.length-1;i++){
-            console.log(aData[i][0]);
-            aData[i][0].onclick = function() {
-                let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
-                if( searchObj[0].getAttribute("data-type")){
-                    searchData = searchObj[0].getAttribute("data-type");
-                }
-                console.log(searchData)
-                setTimeout(function () {
-                    jumpPage();
-                },500)
-            };
+            console.log(aData[i]);
+            // aData[i][0].onclick = function() {
+            //     let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
+            //     if( searchObj[0].getAttribute("data-type")){
+            //         searchData = searchObj[0].getAttribute("data-type");
+            //     }
+            //     console.log(searchData)
+            //     setTimeout(function () {
+            //         jumpPage();
+            //     },500)
+            // };
         }
         
        function jumpPage() {
