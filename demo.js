@@ -23,18 +23,26 @@
             console.log(inputdata)
         }
 
-        //是否分页存储
-        // 存储搜索页
-        let pageObj = myObj.contentWindow.document.querySelector("#showPageInfo");
-        pageObj.addEventListener("click", function () {
-            alert("我被选择了哈哈哈");
-            let choosePage = myObj.contentWindow.document.getElementsByClassName("active")[0];
-            console.log(choosePage)
-            if(choosePage){
-                page = choosePage.innerHTML;
-                console.log(page)
+        let seacchBty = myObj.contentWindow.document.getElementsByClassName("yn-search-ico")[0];
+        if(seacchBty) {
+            seacchBty.onclick = function () {
+                // jumpPage();
             }
-        });
+        }
+
+        let downBty = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("li")[0];
+        console.log(downBty);
+        // if(downBty){
+        //     downBty.onclick = function () {
+        //         setTimeout(function () {
+        //             jumpPage();
+        //         },4000)
+        //
+        //     }
+        // };
+
+
+
     },3000)
 })();
 
