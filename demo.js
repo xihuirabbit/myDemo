@@ -1,5 +1,6 @@
 (function () {
     setTimeout(function () {
+        alert("加载完成，请继续.....")
         let myObj = document.getElementById("ifrPage100002");
 
         let inputdata = "";
