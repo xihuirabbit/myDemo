@@ -15,7 +15,10 @@
         let cookies = cookiesData[1];
 
         listObj = myObj.contentWindow.document.querySelector("#resultList");
-        console.log(listObj)
+        console.log(listObj);
+        listObj.addEventListener("clcik",function () {
+            alert("点击确定下一步");
+        })
 
         },3000)
 })();
