@@ -34,23 +34,18 @@
 
         let downBty = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("ul")[0];
         console.log(downBty);
-        let liData = downBty.getElementsByTagName("li")
-        console.log(downBty.getElementsByTagName("li"));
-        for(let i = 0;i<liData.length-1;i++){
-            console.log(liData[i][0]);
-            liData[i][0].onclick = function() {
-                let liIndex = liData[i][0];
-                let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
-                console.log(searchObj)
-                if( searchObj[0].getAttribute("data-type")){
-                    searchData = searchObj[liIndex].getAttribute("data-type");
-                }
-                console.log(searchData)
-                setTimeout(function () {
-                    jumpPage();
-                },500)
-            };
-        }
+        console.log(downBty.getElementsByTagName("a"))
+        let aData = downBty.getElementsByTagName("a")
+        downBty.getElementsByTagName("a").onclick = function() {
+            let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
+            if( searchObj[0].getAttribute("data-type")){
+                searchData = searchObj[0].getAttribute("data-type");
+            }
+            console.log(searchData)
+            setTimeout(function () {
+                jumpPage();
+            },500)
+        };
         
        function jumpPage() {
            setTimeout(function () {
