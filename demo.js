@@ -34,6 +34,7 @@
 
         let downBty = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("ul")[0];
         console.log(downBty);
+        console.log(downBty.getElementsByTagName("li"));
         downBty.getElementsByTagName("li").onclick = function() {
             let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
             if( searchObj[0].getAttribute("data-type")){
@@ -50,7 +51,6 @@
                let listObj = myObj.contentWindow.document.querySelector("#resultList");
                listObj.addEventListener("click", function(e){
                    setTimeout(function (){
-                       alert("下一步")
                        // 存储搜索页
                        let pageObj = myObj.contentWindow.document.getElementsByClassName("active")[0];
                        if(pageObj){
