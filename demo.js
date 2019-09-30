@@ -26,27 +26,28 @@
         let seacchBty = myObj.contentWindow.document.getElementsByClassName("yn-search-ico")[0];
         if(seacchBty) {
             seacchBty.onclick = function () {
-                // jumpPage();
+                setTimeout(function () {
+                    jumpPage();
+                },500)
             }
         }
 
         let downBty = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("ul");
         console.log(downBty);
-        downBty.getElementsByTagName("li").onclick = function() {
+        downBty[0].getElementsByTagName("li").onclick = function() {
             let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
             if( searchObj[0].getAttribute("data-type")){
                 searchData = searchObj[0].getAttribute("data-type");
             }
             console.log(searchData)
-        }
-        // if(downBty){
-        //     downBty.onclick = function () {
-        //         setTimeout(function () {
-        //             jumpPage();
-        //         },4000)
-        //
-        //     }
-        // };
+            setTimeout(function () {
+                jumpPage();
+            },500)
+        };
+        
+       function jumpPage() {
+           
+       }
 
 
 
