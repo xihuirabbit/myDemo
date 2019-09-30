@@ -30,8 +30,15 @@
             }
         }
 
-        let downBty = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("li");
+        let downBty = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("ul");
         console.log(downBty);
+        downBty.getElementsByTagName("li").onclick = function() {
+            let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
+            if( searchObj[0].getAttribute("data-type")){
+                searchData = searchObj[0].getAttribute("data-type");
+            }
+            console.log(searchData)
+        }
         // if(downBty){
         //     downBty.onclick = function () {
         //         setTimeout(function () {
