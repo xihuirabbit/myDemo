@@ -36,9 +36,11 @@
         console.log(downBty);
         console.log(downBty.getElementsByTagName("li"));
         downBty.getElementsByTagName("li").onclick = function() {
+            let liIndex = downBty.getElementsByTagName("li").index();
+            console.log(liIndex);
             let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
-            if( searchObj[0].getAttribute("data-type")){
-                searchData = searchObj[0].getAttribute("data-type");
+            if( searchObj[liIndex].getAttribute("data-type")){
+                searchData = searchObj[liIndex].getAttribute("data-type");
             }
             console.log(searchData)
             setTimeout(function () {
