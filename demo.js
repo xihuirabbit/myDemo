@@ -30,7 +30,7 @@
             }
         }
 
-        let downBty = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("li")[0];
+        let downBty = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("li");
         console.log(downBty);
         // if(downBty){
         //     downBty.onclick = function () {
