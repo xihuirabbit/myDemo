@@ -49,6 +49,16 @@
             //     },500)
             // };
         }
+        downBty.getElementsByTagName("a").onclick = function () {
+            let searchObj = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("span");
+            if( searchObj[0].getAttribute("data-type")){
+                searchData = searchObj[0].getAttribute("data-type");
+            }
+            console.log(searchData)
+            setTimeout(function () {
+                jumpPage();
+            },500)
+        }
         
        function jumpPage() {
            setTimeout(function () {
