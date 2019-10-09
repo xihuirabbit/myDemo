@@ -40,9 +40,9 @@
 
             //存储搜索页
             let pageObj = myObj.contentWindow.document.querySelector("#showPageInfo");
-            consoe.log(pageObj);
+            console.log(pageObj);
             let pagelength = pageObj.getElementsByTagName("a");
-            consoe.log(pagelength);
+            console.log(pagelength);
             // let pageObj = myObj.contentWindow.document.getElementsByClassName("active")[0];
             // if(pageObj){
             //     page = pageObj.innerHTML;
