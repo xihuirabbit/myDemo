@@ -46,15 +46,15 @@
             if(pageObj){
                 page = pageObj.innerHTML;
             }
-            console.log(page)
+            console.log(page);
 
-            let answerObj = myObj.contentWindow.document.querySelector("#content1");
-            console.log(answerObj);
-            if(answerObj){
-                console.log("aa")
-            }
-
-
+            setTimeout(function () {
+                let answerObj = myObj.contentWindow.document.querySelector("#content1");
+                console.log(answerObj);
+                if(answerObj){
+                    console.log("aa")
+                }
+            },500)
         })
     },3000)
 })();
