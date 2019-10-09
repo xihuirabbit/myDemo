@@ -13,6 +13,8 @@
 
 
         console.log(myObj.contentWindow.document.querySelector("#resultList"))
+        console.log( myObj.contentWindow.document.querySelector("#content1"))
+        console.log(myObj.contentWindow.document.querySelector("#myTabContent"))
 
 
 
