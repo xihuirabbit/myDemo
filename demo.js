@@ -29,7 +29,7 @@
             console.log(inputdata)
 
             // 类型
-            let downBty = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("ul");
+            let downBty = myObj.contentWindow.document.querySelector("#multSearchType");
             console.log(downBty);
             let searchObj = downBty.getElementsByTagName("span");
             console.log(searchObj)
@@ -37,6 +37,12 @@
                 searchData = searchObj[0].getAttribute("data-type");
             }
             console.log(searchData)
+
+            // 存储搜索页
+            // let pageObj = myObj.contentWindow.document.getElementsByClassName("active")[0];
+            // if(pageObj){
+            //     page = pageObj.innerHTML;
+            // }
 
 
         })
