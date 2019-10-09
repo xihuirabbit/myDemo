@@ -1,4 +1,9 @@
-window.onload = function(){
-    alert("页面加载完成，请继续....")
-};
+(function () {
+    document.onreadystatechange = function(){
+        if(document.readyState=="complete")
+        {
+            alert('加载完毕,请继续');
+        }
+    }
+})();
 
