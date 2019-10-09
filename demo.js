@@ -13,8 +13,9 @@
 
 
         // 新增按钮层
-
-
+        let btyDiv = document.createElement("div");
+        btyDiv.innerHTML = "aa";
+        myObj.appendChild(div);
     },3000)
 })();
 
