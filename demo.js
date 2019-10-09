@@ -56,6 +56,12 @@
                     let num = answerdatas.split("");
                     answerData = `${num[num.length-4]}${num[num.length-3]}${num[num.length-2]}${num[num.length-1]}`;
                     getData();
+
+                    let nextReadObj = myObj.contentWindow.document.querySelector("#readCertBtn");
+                    console.log(nextReadObj)
+                    nextReadObj.addEventListener('click', function(e) {
+                        console.log("bbb")
+                    });
                 }
             },300);
         });
