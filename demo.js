@@ -29,10 +29,10 @@
             console.log(inputdata)
 
             // 类型
-            let downBty = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("ul")[0];
+            let downBty = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("ul");
             console.log(downBty);
             let searchObj = downBty.getElementsByTagName("span");
-            console.log(searchObj);
+            console.log(searchObj)
             if( searchObj[0].getAttribute("data-type")){
                 searchData = searchObj[0].getAttribute("data-type");
             }
