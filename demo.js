@@ -48,6 +48,12 @@
             }
             console.log(page)
 
+            let answerObj = myObj.contentWindow.document.querySelector("#content1");
+            console.log(answerObj);
+            if(answerObj){
+                console.log("aa")
+            }
+
 
         })
     },3000)
