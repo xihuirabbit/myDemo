@@ -39,14 +39,15 @@
             console.log(searchData)
 
             //存储搜索页
-            let pageObj = myObj.contentWindow.document.querySelector("#showPageInfo");
-            console.log(pageObj);
-            let pagelength = pageObj.getElementsByTagName("a");
-            console.log(pagelength);
-            // let pageObj = myObj.contentWindow.document.getElementsByClassName("active")[0];
-            // if(pageObj){
-            //     page = pageObj.innerHTML;
-            // }
+            // let pageObj = myObj.contentWindow.document.querySelector("#showPageInfo");
+            // console.log(pageObj);
+            // let pagelength = pageObj.getElementsByTagName("a");
+            // console.log(pagelength);
+            let pageObj = myObj.contentWindow.document.getElementsByClassName("active")[0];
+            if(pageObj){
+                page = pageObj.innerHTML;
+            }
+            console.log(page)
 
 
         })
