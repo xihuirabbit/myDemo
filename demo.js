@@ -60,7 +60,8 @@
                     let nextReadObj = myObj.contentWindow.document.querySelector("#readCertBtn");
                     console.log(nextReadObj)
                     nextReadObj.addEventListener('click', function(e) {
-                        console.log("bbb")
+                        console.log("bbb");
+                        secondModal ();
                     });
                 }
             },300);
@@ -108,7 +109,14 @@
             }
         };
 
+        function secondModal() {
+            let readBtyObj = myObj.contentWindow.document.querySelector("#scanCert");
+            console.log(readBtyObj);
+            readBtyObj.addEventListener('click', function(e) {
+                console.log("ccc");
 
+            });
+        }
     },3000)
 })();
 
