@@ -4,6 +4,14 @@
         let myObj = document.getElementById("ifrPage100002");
         console.log(myObj);
 
+        //cookies备用
+        const aa = document.cookie;
+        let cookiesTotal= aa.split(";");
+        let cookiesData = cookiesTotal[1].split("=");
+        let cookies = cookiesData[1];
+        console.log(cookies)
+
+
         // 新增按钮层
 
 
