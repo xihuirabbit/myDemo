@@ -11,6 +11,14 @@
         let cookies = cookiesData[1];
         console.log(cookies)
 
+        //监听第一个滑动框的点击事件
+        let firstModal = myObj.contentWindow.document.querySelector("#searchList");
+        console.log(firstModal);
+        firstModal.addEventListener('click', function(e) {
+            console.log("bb")
+        })
+
+
         document.querySelector('body').addEventListener('click', function(e) {
             console.log("aa")
         })
