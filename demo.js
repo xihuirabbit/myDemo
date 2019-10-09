@@ -11,10 +11,9 @@
         let cookies = cookiesData[1];
         console.log(cookies)
 
-
-        console.log(myObj.contentWindow.document.querySelector("#resultList"))
-        console.log( myObj.contentWindow.document.querySelector("#content1"))
-        console.log(myObj.contentWindow.document.querySelector("#myTabContent"))
+        document.querySelector('body').addEventListener('click', function(e) {
+            console.log("aa")
+        })
 
 
 
