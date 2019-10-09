@@ -92,11 +92,13 @@
                             cardList2.push(cardList1[i].replace('"', ''));
                         }
                     }
-                    let dataCard = cardList2[1].substring(cardList2[1].length-6);
-                    let card = myObj.contentWindow.document.querySelector("#certNumSuffix");
-                    if(card != null){
-                        card.value = dataCard;
-                        card.removeAttribute('disabled');
+                    if( cardList2.lebgth>0){
+                        let dataCard = cardList2[1].substring(cardList2[1].length-6);
+                        let card = myObj.contentWindow.document.querySelector("#certNumSuffix");
+                        if(card != null){
+                            card.value = dataCard;
+                            card.removeAttribute('disabled');
+                        }
                     }
                 }
             }
