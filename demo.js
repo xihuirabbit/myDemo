@@ -11,20 +11,35 @@
         let cookies = cookiesData[1];
         console.log(cookies)
 
+        // 变量
+        let inputdata = "";
+        let searchData = "accNbr";
+        let listObj = "";
+        let page = "";
+        let answerData = "";
+
         //监听第一个滑动框的点击事件
         let firstModal = myObj.contentWindow.document.querySelector("#searchList");
         console.log(firstModal);
         firstModal.addEventListener('click', function(e) {
-            console.log("bb")
+            // input 输入框；
+            let inputObj = myObj.contentWindow.document.querySelector("#qryCustomerInputStr");
+            console.log(inputObj)
+            inputdata = inputObj.value;
+            console.log(inputdata)
+
+            // 类型
+            let downBty = myObj.contentWindow.document.querySelector("#multSearchType").getElementsByTagName("ul")[0];
+            console.log(downBty);
+            let searchObj = downBty.getElementsByTagName("span");
+            console.log(searchObj);
+            if( searchObj[0].getAttribute("data-type")){
+                searchData = searchObj[0].getAttribute("data-type");
+            }
+            console.log(searchData)
+
+
         })
-
-
-        document.querySelector('body').addEventListener('click', function(e) {
-            console.log("aa")
-        })
-
-
-
     },3000)
 })();
 
