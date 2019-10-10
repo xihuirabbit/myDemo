@@ -110,7 +110,8 @@
         };
 
         function secondModal() {
-
+            let readBty = myObj.contentWindow.document.querySelector("#scanCert");
+            console.log(readBty);
         }
     },3000)
 })();
