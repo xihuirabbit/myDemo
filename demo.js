@@ -61,7 +61,7 @@
                     console.log(nextReadObj)
                     nextReadObj.addEventListener('click', function(e) {
                         console.log("bbb");
-                        secondModal ();
+                        // secondModal ();
                     });
                 }
             },300);
@@ -109,10 +109,10 @@
             }
         };
 
-        function secondModal() {
-            let readBty = myObj.contentWindow.document.querySelector("#scanCert");
-            console.log(readBty);
-        }
+        // function secondModal() {
+        //     let readBty = myObj.contentWindow.document.querySelector("#scanCert");
+        //     console.log(readBty);
+        // }
     },3000)
 })();
 
