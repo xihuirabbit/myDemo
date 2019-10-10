@@ -110,10 +110,7 @@
         };
 
         function secondModal() {
-           setTimeout(function () {
-               let readBtyObj = myObj.contentWindow.document.querySelector("#scanCert");
-               console.log(readBtyObj);
-           },200)
+
         }
     },3000)
 })();
