@@ -17,7 +17,7 @@ function getIframe() {
         getIframe ();
     }
 };
-function getfirstModal() {
+function getfirstModal(){
     let firstModal = document.getElementById("ifrPage100002").contentWindow.document.querySelector("#searchList");
     if(firstModal){
         console.log(firstModal)
