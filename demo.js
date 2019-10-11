@@ -9,7 +9,7 @@
 
 })();
 function getIframe() {
-    var myObj = document.getElementById("ifrPage100002");
+    let myObj = document.getElementById("ifrPage100002");
     if(myObj){
         console.log(myObj);
         getfirstModal ();
@@ -18,7 +18,7 @@ function getIframe() {
     }
 };
 function getfirstModal() {
-    let firstModal = myObj.contentWindow.document.querySelector("#searchList");
+    let firstModal = document.getElementById("ifrPage100002").contentWindow.document.querySelector("#searchList");
     if(firstModal){
         console.log(firstModal)
     }else{
