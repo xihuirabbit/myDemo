@@ -9,7 +9,7 @@
 
 })();
 function getIframe() {
-    let myObj = document.getElementById("ifrPage100002");
+    var myObj = document.getElementById("ifrPage100002");
     if(myObj){
         console.log(myObj);
         getfirstModal ();
