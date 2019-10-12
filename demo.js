@@ -4,13 +4,14 @@
     let cookiesTotal= aa.split(";");
     let cookiesData = cookiesTotal[1].split("=");
     let cookies = cookiesData[1];
-    console.log(cookies)
-    // getIframe();
+    console.log(cookies);
+
+    getIframe();
     function getIframe() {
         let myObj = document.getElementById("ifrPage100002");
         if(myObj){
             console.log(myObj);
-            getfirstModal ();
+            // getfirstModal ();
         }else{
             getIframe ();
         }
