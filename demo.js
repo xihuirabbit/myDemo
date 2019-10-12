@@ -1,4 +1,5 @@
 (function () {
+    let myObj = "";
     //cookies备用
     const aa = document.cookie;
     let cookiesTotal= aa.split(";");
@@ -8,23 +9,24 @@
 
     getIframe();
     function getIframe() {
-        let myObj = document.getElementById("ifrPage100002");
+       myObj = document.getElementById("ifrPage100002");
         if(myObj){
             console.log(myObj);
-            // getfirstModal ();
+            getfirstModal ();
         }else{
             getIframe ();
         }
     };
 
+    function getfirstModal(){
+        let firstModal = myObj.contentWindow.document.querySelector("#searchList");
+        if(firstModal){
+            console.log(firstModal)
+        }else{
+            getfirstModal ();
+        }
+    };
+
 })();
 
-// function getfirstModal(){
-//     let firstModal = document.getElementById("ifrPage100002").contentWindow.document.querySelector("#searchList");
-//     if(firstModal){
-//         console.log(firstModal)
-//     }else{
-//         getfirstModal ();
-//     }
-// }
 
