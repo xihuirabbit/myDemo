@@ -17,15 +17,14 @@
             getIframe ();
         }
     };
-
-    function getfirstModal(){
+    function getfirstModal() {
         let firstModal = myObj.contentWindow.document.querySelector("#searchList");
         if(firstModal){
             console.log(firstModal)
         }else{
             getfirstModal ();
         }
-    };
+    }
 
 })();
 
