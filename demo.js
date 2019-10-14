@@ -20,6 +20,7 @@
 
     function getfirstModal() {
         let firstModal = myObj.contentWindow.document.querySelector("#searchList");
+        console.log(firstModal)
         if(firstModal){
             console.log(firstModal)
         }else{
