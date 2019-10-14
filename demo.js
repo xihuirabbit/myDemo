@@ -1,6 +1,7 @@
 (function () {
     let myObj = "";
     let cookies = "";
+    let time = "";
     getIframe();
     function getIframe() {
        myObj = document.getElementById("ifrPage100002");
@@ -19,14 +20,15 @@
     }
 
     function getfirstModal() {
-        let firstModal = myObj.contentWindow.document.querySelector("#searchList");
-        console.log(firstModal)
-        if(firstModal){
-            console.log(firstModal)
-        }else{
-            console.log("nbb")
-            // getfirstModal ();
-        }
+        setTimeout(function () {
+            let firstModal = myObj.contentWindow.document.querySelector("#searchList");
+            if(firstModal){
+                console.log(firstModal)
+            }else{
+                console.log("nbb");
+                getfirstModal ();
+            }
+        },100)
     }
 
 })();
