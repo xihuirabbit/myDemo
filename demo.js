@@ -57,11 +57,23 @@
                     }
                     console.log(page);
 
+                    getSecondModal();
                 })
             }else{
                 getfirstModal ();
             }
         },100)
+    };
+
+    function getSecondModal() {
+        setTimeout(function () {
+            let answerObj = myObj.contentWindow.document.querySelector("#content1");
+            if(answerObj){
+                console.log(answerObj);
+            }else{
+                getSecondModal();
+            }
+        },150)
     }
 
 })();
