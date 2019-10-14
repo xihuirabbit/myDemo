@@ -23,7 +23,7 @@
         if(firstModal){
             console.log(firstModal)
         }else{
-            getfirstModal ();
+            // getfirstModal ();
         }
     }
 
