@@ -24,6 +24,7 @@
         if(firstModal){
             console.log(firstModal)
         }else{
+            console.log("nbb")
             // getfirstModal ();
         }
     }
