@@ -79,7 +79,7 @@
                 console.log(nextReadObj)
                 nextReadObj.addEventListener('click', function(e) {
                     console.log("bbb");
-                    // secondModal ();
+                    getThirdModal();
                 });
 
 
