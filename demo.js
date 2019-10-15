@@ -4,7 +4,7 @@
     let time = "";
     // 变量
     let inputdata = "";
-    let searchData = "accNbr";
+    let searchData = "";
     let listObj = "";
     let page = "";
     let answerData = "";
@@ -36,15 +36,21 @@
                     let inputObj = myObj.contentWindow.document.querySelector("#qryCustomerInputStr");
                     console.log(inputObj)
                     inputdata = inputObj.value;
-                    console.log(inputdata)
+                    console.log(inputdata);
+
 
                     // 类型
-                    let downBty = myObj.contentWindow.document.querySelector("#multSearchType");
-                    console.log(downBty);
-                    let searchObj = downBty.getElementsByTagName("span");
-                    console.log(searchObj)
-                    if( searchObj[0].getAttribute("data-type")){
-                        searchData = searchObj[0].getAttribute("data-type");
+                    let reg = /^((0\d{2,3}-\d{7,8})|(1[34578]\d{9}))$/;
+                    if ( !reg.test(shop_tel) || check_empty(shop_tel) ){
+                        let downBty = myObj.contentWindow.document.querySelector("#multSearchType");
+                        console.log(downBty);
+                        let searchObj = downBty.getElementsByTagName("span");
+                        console.log(searchObj)
+                        if( searchObj[0].getAttribute("data-type")){
+                            searchData = searchObj[0].getAttribute("data-type");
+                        }
+                    }else{
+                        searchData = "accNbr"
                     }
                     console.log(searchData)
 
@@ -90,6 +96,47 @@
     };
 
     function getData() {
+        let params1 = "";
+        let methodName = "";
+        let selector = "";
+        if(searchData !== "accNbr"){
+            params1 = `["${inputdata}","${searchData}","${cookies}","${page}","10","3a9573c6a65d4cb99aa039bb57b7725a"]`;
+            methodName = "searchCustOnly";
+            selector = "#resultList"
+        }else{
+            params1 = `["${inputdata}","${searchData}","${cookies}","3c156b221d634851a79b446ad23246ec"]`;
+            methodName = "searchCustForFixedAccNum";
+            selector = "#searchList"
+        }
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = callback1;
+        xhr.open("post", "http://crm3.yn.189.cn:9500/crm/so/refreshPart",true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        if(pageLength.length-3 >1){
+            xhr.send("widgetName="+"searchOffer"+"&methodName="+methodName+"&params="+params1+"&selector="+selector);
+        }else{
+            xhr.send("widgetName="+"searchOffer"+"&methodName="+methodName+"&params="+params1+"&selector="+selector+"&keyName="+"");
+        }
+
+        function callback1() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                let data = xhr.responseText;
+                let cardList1 = JSON.stringify(data).split("\\");
+                let cardList2 = [];
+                for(let i in cardList1){
+                    if(cardList1[i].replace('"', '').includes(answerData.toString())){
+                        cardList2.push(cardList1[i].replace('"', ''));
+                    }
+                }
+                let dataCard = cardList2[1].substring(cardList2[1].length-6);
+                let card = myObj.contentWindow.document.querySelector("#certNumSuffix");
+                if(card != null){
+                    card.value = dataCard;
+                    card.removeAttribute('disabled');
+                }
+            }
+        }
+
 
     };
 
@@ -98,12 +145,6 @@
             let readBty = myObj.contentWindow.document.querySelector("#scanCert");
             if(readBty){
                console.log(readBty);
-               readBty.onclick = function () {
-                   console.log("aaa")
-                   let nameInput = myObj.contentWindow.document.querySelector("#Name");
-                   console.log(nameInput);
-                   nameInput.removeAttribute('readonly');
-               }
                // readBty.addEventListener('click', function(e) {
                //     console.log("aaa")
                //     let nameInput = myObj.contentWindow.document.querySelector("#Name");
