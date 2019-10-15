@@ -143,6 +143,8 @@
     function getThirdModal() {
         setTimeout(function () {
             let readBty = myObj.contentWindow.document.querySelector("#scanCert");
+            let nameInput = myObj.contentWindow.document.querySelector("#Name");
+            console.log(nameInput);
             if(readBty){
                console.log(readBty);
                // readBty.addEventListener('click', function(e) {
