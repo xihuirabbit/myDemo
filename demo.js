@@ -112,7 +112,7 @@
         xhr.onreadystatechange = callback1;
         xhr.open("post", "http://crm3.yn.189.cn:9500/crm/so/refreshPart",true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        if(pageLength.length-3 >1){
+        if(searchData !== "accNbr"){
             xhr.send("widgetName="+"searchOffer"+"&methodName="+methodName+"&params="+params1+"&selector="+selector);
         }else{
             xhr.send("widgetName="+"searchOffer"+"&methodName="+methodName+"&params="+params1+"&selector="+selector+"&keyName="+"");
