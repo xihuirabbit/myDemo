@@ -87,6 +87,17 @@
                 getSecondModal();
             }
         },150)
+    };
+
+    function getThirdModal() {
+        setTimeout(function () {
+            let readBty = myObj.contentWindow.document.querySelector("#scanCert");
+            if(readBty){
+               console.log(readBty)
+            }else{
+                getThirdModal ();
+            }
+        },150)
     }
 
 })();
