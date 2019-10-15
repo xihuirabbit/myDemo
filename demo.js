@@ -144,6 +144,7 @@
         setTimeout(function () {
             let readBty = myObj.contentWindow.document.querySelector("#scanCert");
             let nameInput = myObj.contentWindow.document.querySelector("#Name");
+            nameInput.removeAttribute('readonly');
             console.log(nameInput);
             if(readBty){
                console.log(readBty);
