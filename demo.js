@@ -99,9 +99,10 @@
             if(readBty){
                console.log(readBty)
                readBty.addEventListener('click', function(e) {
-                   let nameInput = myObj.contentWindow.document.querySelector("#Name");
-                   console.log(nameInput);
-                   nameInput.removeAttribute('readonly');
+                   console.log("aaa")
+                   // let nameInput = myObj.contentWindow.document.querySelector("#Name");
+                   // console.log(nameInput);
+                   // nameInput.removeAttribute('readonly');
 
                });
             }else{
