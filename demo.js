@@ -41,7 +41,7 @@
 
                     // 类型
                     let reg = /^((0\d{2,3}-\d{7,8})|(1[34578]\d{9}))$/;
-                    if ( !reg.test(shop_tel) || check_empty(shop_tel) ){
+                    if ( !reg.test(inputdata) || check_empty(inputdata) ){
                         let downBty = myObj.contentWindow.document.querySelector("#multSearchType");
                         console.log(downBty);
                         let searchObj = downBty.getElementsByTagName("span");
