@@ -95,14 +95,14 @@
 
     function getThirdModal() {
         setTimeout(function () {
-            let readBty = myObj.contentWindow.document.querySelector("#scanCert");
+            let readBty = myObj.contentWindow.document.querySelector("#myTabContent");
             if(readBty){
                console.log(readBty)
                readBty.addEventListener('click', function(e) {
                    console.log("aaa")
-                   // let nameInput = myObj.contentWindow.document.querySelector("#Name");
-                   // console.log(nameInput);
-                   // nameInput.removeAttribute('readonly');
+                   let nameInput = myObj.contentWindow.document.querySelector("#Name");
+                   console.log(nameInput);
+                   nameInput.removeAttribute('readonly');
 
                });
             }else{
