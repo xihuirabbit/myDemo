@@ -73,7 +73,7 @@
                 let answerdatas = answerObj.getElementsByTagName("span")[0].innerHTML;
                 let num = answerdatas.split("");
                 answerData = `${num[num.length-4]}${num[num.length-3]}${num[num.length-2]}${num[num.length-1]}`;
-                // getData();
+                getData();
 
                 let nextReadObj = myObj.contentWindow.document.querySelector("#readCertBtn");
                 console.log(nextReadObj)
@@ -87,6 +87,10 @@
                 getSecondModal();
             }
         },150)
+    };
+
+    function getData() {
+
     };
 
     function getThirdModal() {
