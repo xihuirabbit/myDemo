@@ -126,6 +126,7 @@
         function callback1() {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 let data = xhr.responseText;
+                console.log(data);
                 console.log(JSON.parse(data))
 
                 let cardList1 = JSON.stringify(data).split("\\");
