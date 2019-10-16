@@ -127,7 +127,7 @@
             if (xhr.readyState == 4 && xhr.status == 200) {
                 let data = xhr.responseText;
                 console.log(data);
-
+                console.log(JSON.parse( JSON.stringify(data)));
                 let cardList1 = JSON.stringify(data).split("\\");
                 let cardList2 = [];
                 for(let i in cardList1){
