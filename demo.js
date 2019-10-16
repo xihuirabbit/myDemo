@@ -100,7 +100,7 @@
         let methodName = "";
         let selector = "";
         if(searchData !== "accNbr"){
-            params1 = `["${inputdata}","${searchData}","${cookies}","${page}","10","3a9573c6a65d4cb99aa039bb57b7725a"]`;
+            params1 = `["${inputdata}","${searchData}","${cookies}","${page}","10","edabd778c21f40c3a5ffd94db36ed208"]`;
             methodName = "searchCustOnly";
             selector = "#resultList"
         }else{
@@ -164,7 +164,27 @@
             let imgObj = myObj.contentWindow.document.querySelector("#IdPhoto");
             console.log(imgObj);
             imgObj.onclick = function () {
-                console.log("图片上传")
+                console.log("图片上传");
+                let fileObj = document.getElementById('file').files[0]
+                if (fileObj) {
+                    let url = ''
+                    let formData = new FormData()
+                    formData.append('image', fileObj)
+                    let xhr = new XMLHttpRequest()
+
+                    xhr.onload = function () {
+                        console.log('ok')
+                        console.log(JSON.parse(xhr.responseText))
+                    }
+                    xhr.onerror = function () {
+                        console.log('fail')
+                    }
+                    xhr.open('post', url, true)
+                    xhr.send(formData)
+
+                } else {
+                    console.log('请选择文件')
+                }
             }
             if(readBty){
                console.log(readBty);
