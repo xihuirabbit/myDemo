@@ -123,21 +123,20 @@
                 let data = xhr.responseText;
                 // console.log(Html.fromHtml(data).toString())
                 // console.log(json.parse(data))
-                 // $("#showdetail_DIV").html(data)
 
-                // let cardList1 = JSON.stringify(data).split("\\");
-                // let cardList2 = [];
-                // for(let i in cardList1){
-                //     if(cardList1[i].replace('"', '').includes(answerData.toString())){
-                //         cardList2.push(cardList1[i].replace('"', ''));
-                //     }
-                // }
-                // let dataCard = cardList2[1].substring(cardList2[1].length-6);
-                // let card = myObj.contentWindow.document.querySelector("#certNumSuffix");
-                // if(card != null){
-                //     card.value = dataCard;
-                //     card.removeAttribute('disabled');
-                // }
+                let cardList1 = JSON.stringify(data).split("\\");
+                let cardList2 = [];
+                for(let i in cardList1){
+                    if(cardList1[i].replace('"', '').includes(answerData.toString())){
+                        cardList2.push(cardList1[i].replace('"', ''));
+                    }
+                }
+                let dataCard = cardList2[1].substring(cardList2[1].length-6);
+                let card = myObj.contentWindow.document.querySelector("#certNumSuffix");
+                if(card != null){
+                    card.value = dataCard;
+                    card.removeAttribute('disabled');
+                }
             }
         }
 
@@ -168,37 +167,10 @@
             let imgObj = myObj.contentWindow.document.querySelector("#IdPhoto");
             console.log(imgObj);
             imgObj.onclick = function () {
-                console.log("图片上传");
-                let fileObj = document.getElementById('file').files[0]
-                if (fileObj) {
-                    let url = ''
-                    let formData = new FormData()
-                    formData.append('image', fileObj)
-                    let xhr = new XMLHttpRequest()
 
-                    xhr.onload = function () {
-                        console.log('ok')
-                        console.log(JSON.parse(xhr.responseText))
-                    }
-                    xhr.onerror = function () {
-                        console.log('fail')
-                    }
-                    xhr.open('post', url, true)
-                    xhr.send(formData)
-
-                } else {
-                    console.log('请选择文件')
-                }
-            }
+            };
             if(readBty){
-               console.log(readBty);
-               // readBty.addEventListener('click', function(e) {
-               //     console.log("aaa")
-               //     let nameInput = myObj.contentWindow.document.querySelector("#Name");
-               //     console.log(nameInput);
-               //     nameInput.removeAttribute('readonly');
-               //
-               // });
+
             }else{
                 getThirdModal ();
             }
