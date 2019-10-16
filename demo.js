@@ -145,7 +145,22 @@
             let readBty = myObj.contentWindow.document.querySelector("#scanCert");
             let nameInput = myObj.contentWindow.document.querySelector("#Name");
             nameInput.removeAttribute('readonly');
-            console.log(nameInput);
+            let cardNoInput = myObj.contentWindow.document.querySelector("#CardNo");
+            cardNoInput.removeAttribute('readonly');
+            let sexInput = myObj.contentWindow.document.querySelector("#Sex");
+            sexInput.removeAttribute('readonly');
+            let nationInput = myObj.contentWindow.document.querySelector("#Nation");
+            nationInput.removeAttribute('readonly');
+            let bonInput = myObj.contentWindow.document.querySelector("#Born");
+            bonInput.removeAttribute('readonly');
+            let addressInput = myObj.contentWindow.document.querySelector("#Address");
+            addressInput.removeAttribute('readonly');
+            let policeInput = myObj.contentWindow.document.querySelector("#Police");
+            policeInput.removeAttribute('readonly');
+            let activityLFromInput = myObj.contentWindow.document.querySelector("#ActivityLFrom");
+            activityLFromInput.removeAttribute('readonly');
+            let activityLToInput = myObj.contentWindow.document.querySelector("#ActivityLTo");
+            activityLToInput.removeAttribute('readonly');
             if(readBty){
                console.log(readBty);
                // readBty.addEventListener('click', function(e) {
