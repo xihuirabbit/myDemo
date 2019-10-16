@@ -161,6 +161,11 @@
             activityLFromInput.removeAttribute('readonly');
             let activityLToInput = myObj.contentWindow.document.querySelector("#ActivityLTo");
             activityLToInput.removeAttribute('readonly');
+            let imgObj = myObj.contentWindow.document.querySelector("#ActivityLTo");
+            console.log(imgObj);
+            imgObj.onclick = function () {
+                console.log("图片上传")
+            }
             if(readBty){
                console.log(readBty);
                // readBty.addEventListener('click', function(e) {
