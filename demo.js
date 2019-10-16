@@ -156,7 +156,7 @@
             let imgObj = myObj.contentWindow.document.querySelector("#IdPhoto");
             console.log(imgObj);
             imgObj.onclick = function () {
-                alert(上传功能待开发)
+                alert("上传功能待开发")
             };
             if(readBty){
 
