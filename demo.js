@@ -17,14 +17,12 @@
             //cookies备用
             const aa = document.cookie;
             let cookiesTotal= aa.split(";");
-            console.log(cookiesTotal)
+            let cookiesData = "";
             cookiesTotal.map((item)=>{
                 if(item.includes("ALID")){
-                    console.log(item)
+                    cookiesData = item.split("=");
                 }
             })
-            let cookiesData = cookiesTotal[1].split("=");
-            console.log(cookiesData);
             cookies = cookiesData[1];
             console.log(cookies);
             getfirstModal ();
