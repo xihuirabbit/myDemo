@@ -121,8 +121,8 @@
         function callback1() {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 let data = xhr.responseText;
-                console.log(Html.fromHtml(data).toString())
-                console.log(json.parse(data))
+                // console.log(Html.fromHtml(data).toString())
+                // console.log(json.parse(data))
                  // $("#showdetail_DIV").html(data)
 
                 // let cardList1 = JSON.stringify(data).split("\\");
