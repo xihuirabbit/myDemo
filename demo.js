@@ -18,6 +18,11 @@
             const aa = document.cookie;
             let cookiesTotal= aa.split(";");
             console.log(cookiesTotal)
+            cookiesTotal.map((item)=>{
+                if(item.includes("ALID")){
+                    console.log(item)
+                }
+            })
             let cookiesData = cookiesTotal[1].split("=");
             console.log(cookiesData);
             cookies = cookiesData[1];
