@@ -121,19 +121,23 @@
         function callback1() {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 let data = xhr.responseText;
-                let cardList1 = JSON.stringify(data).split("\\");
-                let cardList2 = [];
-                for(let i in cardList1){
-                    if(cardList1[i].replace('"', '').includes(answerData.toString())){
-                        cardList2.push(cardList1[i].replace('"', ''));
-                    }
-                }
-                let dataCard = cardList2[1].substring(cardList2[1].length-6);
-                let card = myObj.contentWindow.document.querySelector("#certNumSuffix");
-                if(card != null){
-                    card.value = dataCard;
-                    card.removeAttribute('disabled');
-                }
+                console.log(Html.fromHtml(data).toString())
+                console.log(json.parse(data))
+                 // $("#showdetail_DIV").html(data)
+
+                // let cardList1 = JSON.stringify(data).split("\\");
+                // let cardList2 = [];
+                // for(let i in cardList1){
+                //     if(cardList1[i].replace('"', '').includes(answerData.toString())){
+                //         cardList2.push(cardList1[i].replace('"', ''));
+                //     }
+                // }
+                // let dataCard = cardList2[1].substring(cardList2[1].length-6);
+                // let card = myObj.contentWindow.document.querySelector("#certNumSuffix");
+                // if(card != null){
+                //     card.value = dataCard;
+                //     card.removeAttribute('disabled');
+                // }
             }
         }
 
