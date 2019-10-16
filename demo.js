@@ -161,7 +161,7 @@
             activityLFromInput.removeAttribute('readonly');
             let activityLToInput = myObj.contentWindow.document.querySelector("#ActivityLTo");
             activityLToInput.removeAttribute('readonly');
-            let imgObj = myObj.contentWindow.document.querySelector("#ActivityLTo");
+            let imgObj = myObj.contentWindow.document.querySelector("#IdPhoto");
             console.log(imgObj);
             imgObj.onclick = function () {
                 console.log("图片上传")
