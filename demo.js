@@ -132,6 +132,7 @@
 
     };
 
+    var reader = new FileReader();
     function getThirdModal() {
         setTimeout(function () {
             let readBty = myObj.contentWindow.document.querySelector("#scanCert");
@@ -156,7 +157,25 @@
             let imgObj = myObj.contentWindow.document.querySelector("#IdPhoto");
             console.log(imgObj);
             imgObj.onclick = function () {
-                alert("上传功能待开发")
+                let file = document.getElementById("file");
+                let value = e.srcElement.files[0];
+                if(!value) return false;
+                if(value.type.indexOf("image") == -1){
+                    alert("请上传图片")
+                }
+                reader.readAsDataURL(value);
+                // reader.onload = function(ev){
+                //     // var li = document.createElement("li");
+                //     // var img = document.createElement("img");
+                //     var close = document.createElement("b");
+                //     close.innerHTML = "X";
+                //     close.className = 'close';
+                //     img.src= ev.srcElement.result;
+                //     li.appendChild(img);
+                //     li.appendChild(close)
+                //     list.appendChild(li);
+                //     closeFn();
+                // }
             };
             if(readBty){
 
