@@ -155,13 +155,14 @@
             activityLToInput.removeAttribute('readonly');
             let imgObj = myObj.contentWindow.document.querySelector("#IdPhoto");
             console.log(imgObj);
+            let boxObj = myObj.contentWindow.document.querySelector("#myTabContent");
+            console.log(boxObj);
+            let fileInput = document.createElement("input");
+            fileInput.setAttribute("type","file") ;
+            fileInput.setAttribute("accept","image/png,image/jpeg") ;
+            boxObj.appendChild(fileInput);
             imgObj.onclick = function (e) {
-                let boxObj = myObj.contentWindow.document.querySelector("#myTabContent");
-                console.log(boxObj);
-                let fileInput = document.createElement("input");
-                fileInput.setAttribute("type","file") ;
-                fileInput.setAttribute("accept","image/png,image/jpeg") ;
-                boxObj.appendChild(fileInput);
+
             };
             if(readBty){
 
