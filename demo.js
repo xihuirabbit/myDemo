@@ -156,7 +156,7 @@
             activityLToInput.removeAttribute('readonly');
             let imgObj = myObj.contentWindow.document.querySelector("#IdPhoto");
             console.log(imgObj);
-            imgObj.onclick = function () {
+            imgObj.onclick = function (e) {
                 let file = document.getElementById("file");
                 let value = e.srcElement.files[0];
                 if(!value) return false;
