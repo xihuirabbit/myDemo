@@ -79,8 +79,6 @@
                 nextReadObj.addEventListener('click', function(e) {
                     getThirdModal();
                 });
-
-
             }else{
                 getSecondModal();
             }
@@ -155,20 +153,20 @@
             activityLToInput.removeAttribute('readonly');
             let imgObj = myObj.contentWindow.document.querySelector("#IdPhoto");
             console.log(imgObj);
-            let boxObj = myObj.contentWindow.document.querySelector("#myTabContent");
+            let boxObj = myObj.contentWindow.document.querySelector("#11");
             console.log(boxObj);
-            let fileInput = document.createElement("input");
-            fileInput.setAttribute("type","file") ;
-            fileInput.setAttribute("accept","image/png,image/jpeg") ;
-            boxObj.appendChild(fileInput);
-            imgObj.onclick = function (e) {
-
-            };
-            if(readBty){
-
-            }else{
-                getThirdModal ();
-            }
+            // let fileInput = document.createElement("input");
+            // fileInput.setAttribute("type","file") ;
+            // fileInput.setAttribute("accept","image/png,image/jpeg") ;
+            // boxObj.appendChild(fileInput);
+            // imgObj.onclick = function (e) {
+            //
+            // };
+            // if(readBty){
+            //
+            // }else{
+            //     getThirdModal ();
+            // }
         },150)
     }
 
